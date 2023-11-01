@@ -1,0 +1,36 @@
+.popup {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/007/516/492/original/polka-dot-background-with-colorful-circles-free-vector.jpg);
+    width: 600px;
+    height: 200px;
+    position: fixed;
+    left: 30%;
+    top: 40%;
+    border-radius: 8px;
+    border-color: black;
+}
+.popup button {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: rgb(207, 15, 15);
+    font-size: 40px;
+    color: #641c1c;
+    border-radius: 30%;
+    outline: none;
+    cursor: pointer;
+}
+
+.popup h2 {
+
+    color: rgb(255, 0, 0);
+    text-align: center;
+
+}
+
+.popup p {
+
+    font-size: 30px;
+    text-align: justify;
+    margin: 20px 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
