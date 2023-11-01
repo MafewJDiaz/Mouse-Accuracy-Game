@@ -11,3 +11,16 @@ document.querySelector("#close").addEventListener("click", function(){
     console.log("close");
     
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+<p  id = "cd"> </p>
+var countDownDate = newDate ("3")
+var x = setInterval(function(){
+    
+})
+});
+    
+
+
+
+
