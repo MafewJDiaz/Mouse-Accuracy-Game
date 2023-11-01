@@ -1,12 +1,12 @@
 .popup {
-    background-image: url(https://static.vecteezy.com/system/resources/previews/007/516/492/original/polka-dot-background-with-colorful-circles-free-vector.jpg);
+    background-image: url(https://kansashydrographics.com/cdn/shop/products/3D_Polka_Dots_530x@2x.jpg?v=1539296284);
     width: 600px;
     height: 200px;
     position: fixed;
     left: 30%;
     top: 40%;
     border-radius: 8px;
-    border-color: black;
+    display: none;
 }
 .popup button {
     display: block;
