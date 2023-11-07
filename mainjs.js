@@ -12,15 +12,13 @@ document.querySelector("#close").addEventListener("click", function(){
     
 });
 
-document.addEventListener("DOMContentLoaded", function(){
-<p  id = "cd"> </p>
-var countDownDate = newDate ("3")
-var x = setInterval(function(){
-    
-})
-});
-    
-
-
-
+var timeleft = 5;
+var downloadTimer = setInterval(function(){
+    if(timeleft <= 0){
+      clearInterval(downloadTimer);
+    } else {
+        document.getElementById("countdown").innerHTML = timeleft + "seconds before the game starts.";
+    }
+    timeleft -= 1;
+}, 1000);
 
