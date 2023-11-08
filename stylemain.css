@@ -45,6 +45,7 @@
     opacity: 0;
     transition: transform 1000ms, opacity 1000ms;
 }
+
 .possible{
     position: relative;
     width: 200px;
