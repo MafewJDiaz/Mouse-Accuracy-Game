@@ -63,14 +63,22 @@ body{
     
 }
 
-.circlemain {
-
-    height: color: var(growpoint);
-    width:color: var(growpoint);
-    background-color:rgb(137, 44, 44);
+.circle {
+    display: none;
+    position: absolute;
+    background-color: #3498db;
     border-radius: 50%;
-    display: inline-block;
+    transition: width 1.5s, height 1.5s, opacity 1.5s;
+}
 
+.countdown{
+    font-size: x-large;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 

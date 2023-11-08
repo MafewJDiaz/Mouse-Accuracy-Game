@@ -1,44 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script src="mainjs.js" defer></script>
     <title>MDs JavaScript World</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylemain.css">
-
-
 </head>
-
 <body>
-
     <div class="popup">
         <button id="close">&times;</button>
         <h2>Click Game</h2>
-        <p>Click circles before the disappear</p>
+        <p>Click circles before they disappear</p>
     </div>
 
     <div class="scorebar">
-        <ul>
-            <li> <span id="B1" class="dot"></span></li>
-            <li> <span id="B2" class="dot"></span></li>
-            <li> <span id="B3" class="dot"></span></li>
-            <li> <span id="B4" class="dot"></span></li>
-            <li> <span id="B5" class="dot"></span></li>
-            <li> <span id="B6" class="dot"></span></li>
-            <li> <span id="B7" class="dot"></span></li>
-            <li> <span id="B8" class="dot"></span></li>
-            <li> <span id="B9" class="dot"></span></li>
-            <li> <span id="B10" class="dot"></span></li>
-
+        <ul id="scoreList">
+            <!-- Add more dots as needed for tracking clicks -->
         </ul>
     </div>
 
-    <div id="countdown-display">3</div>
+    <div class="countdown" id="safeTimer">
+        <h2 id="safeTimerDisplay">3</h2>
+    </div>
 
-    <div class="circlemain"></div>    
-    
-
+    <div id="circle" class="circle"></div>
 </body>
-
 </html>
