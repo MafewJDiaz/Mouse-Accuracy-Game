@@ -55,14 +55,14 @@ function randomcircles() {
                 });
 
                  },5000);
-},0);
+},5);
 
 target.addEventListener("disappear",() => {
         possible.removeChild(target);
             } );
         
             const time = 30000;
-            const targetduration = 1000;
+            const targetduration = 2000;
             let gameTimer = setInterval(randomcircles, targetduration);
 
 
