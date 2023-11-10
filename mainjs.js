@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
     document.querySelector(".popup").style.display = "block";
   }, 1500);
 });
-
 document.querySelector("#close").addEventListener("click", function () {
   document.querySelector(".popup").style.display = "none";
   document.querySelector(".countdown").style.display = "block";
@@ -14,7 +13,6 @@ const circle = document.querySelector("#circle");
 let clickCount = 0;
 let circleClickCount = 0;
 let animationCount = 0;
-
 circle.addEventListener("click", function () {
   if (parseFloat(circle.style.width) > 0) {
     circleClickCount++;
@@ -26,7 +24,6 @@ circle.addEventListener("click", function () {
     }, 500);
   }
 });
-
 function startGame() {
   const countdown = document.getElementById('safeTimerDisplay');
   let sec = 3;
@@ -42,7 +39,6 @@ function startGame() {
     }
   }, 1000);
 }
-
 function createAndAnimateCircle() {
   if (animationCount < 15) {
     circle.style.display = "block";
@@ -57,9 +53,9 @@ function createAndAnimateCircle() {
 
     circle.addEventListener("click", function () {
       if (parseFloat(circle.style.width) > 0) {
-        circleclickCount+;
+        circleclickCount + ;
         document.querySelector(".scorebar ul").innerHTML += "<li class='dot'></li>";
-        document.querySelector(".circle").style.display= "none"; // Fully disappear when clicked
+        document.querySelector(".circle").style.display = "none"; // Fully disappear when clicked
       }
     });
 
@@ -77,7 +73,6 @@ function createAndAnimateCircle() {
     }, 50); // Adjusted interval to make it slower
   }
 }
-
 function shrinkCircle() {
   const shrinkInterval = setInterval(function () {
     const currentDiameter = parseFloat(circle.style.width) * 2;
@@ -92,7 +87,7 @@ function shrinkCircle() {
     }
   }, 50); // Adjusted interval to make it slower
 }
-
 function getRandomLocation(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+
