@@ -45,7 +45,7 @@ function createAndAnimateCircle() {
 
     circle.addEventListener("click", function () {
       if (parseFloat(circle.style.width) > 0) {
-        circleClickCount+;
+        circleclickCount+;
         document.querySelector(".scorebar ul").innerHTML += "<li class='dot'></li>";
         document.querySelector(".circle").style.display= "none"; // Fully disappear when clicked
       }
