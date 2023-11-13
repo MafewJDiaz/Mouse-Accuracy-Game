@@ -11,6 +11,7 @@ document.querySelector("#close").addEventListener("click", function () {
   startGame();
 });
 const circle = document.querySelector("#circle");
+let gameStarted = false;
 let clickCount = 0;
 let circleClickCount = 0;
 let animationCount = 0;
@@ -28,6 +29,11 @@ circle.addEventListener("click", function () {
 });
 
 function startGame() {
+  if (!gameStarted) {
+    clickCount = 0;
+    circleClickCount=0;
+  }
+  startTimer(10);
   const countdown = document.getElementById('safeTimerDisplay');
   let sec = 3;
   const timer = setInterval(function () {
@@ -89,3 +95,28 @@ function getRandomLocation(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+function startTimer(seconds) {
+  const timerDisplay = document.getElementById('timer');
+  let time = seconds;
+  timerDisplay.textContent = "Time: ${time}s";
+
+  timer = setInterval(() => {
+      time--;
+      timerDisplay.textContent = `Time: ${time}s`;
+
+      if (time <= 0) {
+          endGame();
+      }
+  }, 1000);
+}
+
+function endGame() {
+  gameStarted = false;
+  clearInterval(timer);
+  const viewport = document.getElementById("viewport");
+  while (viewport.firstChild) {
+      viewport.removeChild(viewport.firstChild);
+  }
+  // Display the scoreboard
+  alert(`Game Over\nTotal Targets: ${clickCount}\nSuccessful Clicks: ${circleClickCount}\nScore: ${clickCount - circleClickCount}`);
+}
