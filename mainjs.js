@@ -90,33 +90,3 @@ function shrinkCircle() {
 function getRandomLocation(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-
-function startTimer(seconds) {
-  const timerDisplay = document.getElementById("timer");
-  let time = seconds;
-  timerDisplay.textContent = "Time: ${time}s";
-
-  timer = setInterval(() => {
-      time--;
-      timerDisplay.textContent = "Time: ${time}s";
-
-      if (time <= 0) {
-          endGame();
-      }
-  }, 1000);
-}
-
-
-function endGame() {
-  gameStarted = false;
-  clearInterval(timer);
-  const viewport = document.getElementById('viewport');
-  while (viewport.firstChild) {
-      viewport.removeChild(viewport.firstChild);
-  }
-  
-  alert("Game Over\nTotal Targets: ${clickCount}\nSuccessful Clicks: ${circleClickCount}\nScore: ${circleClickCount}");
-}
-
-let startTimer = 0;
-
